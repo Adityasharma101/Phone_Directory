@@ -1,21 +1,19 @@
 @import url("footer.css");
 @import url("header.css");
+@import url("color.css");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-:root {
-  --color1: #000000;
-  --color3: #ff0000;
-  --color2: #ededed;
-}
+
 
 body {
   height: 100vh;
   background: var(--color1);
 }
+
 .main {
   height: 79.9vh;
   display: flex;
@@ -36,6 +34,7 @@ body {
   height: 20%;
   margin: auto;
 }
+
 .heading {
   color: var(--color2);
 }
@@ -54,6 +53,7 @@ body {
   line-height: 90px;
   overflow: hidden;
 }
+
 .dynamic-txts li {
   list-style: none;
   color: var(--color3);
@@ -63,15 +63,18 @@ body {
   top: 0;
   animation: slide 12s steps(4) infinite;
 }
+
 @keyframes slide {
   100% {
     top: -360px;
   }
 }
+
 .dynamic-txts li span {
   position: relative;
   line-height: 90px;
 }
+
 .dynamic-txts li span::after {
   content: "";
   position: absolute;
@@ -82,11 +85,13 @@ body {
   border-left: 2px solid #fc6d6d;
   animation: typing 3s steps(10) infinite none running;
 }
+
 @keyframes typing {
   40%,
   60% {
     left: calc(100% + 30px);
   }
+
   100% {
     left: 0;
   }
@@ -98,6 +103,7 @@ body {
   width: 50%;
   flex-basis: 50%;
 }
+
 .svg-image img {
   height: 70%;
   margin: auto;

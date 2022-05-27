@@ -75,8 +75,6 @@ function deleteContactDetail(name) {
 
 // }
 
-
-
 // function updateContactDetail(name,phone,email,userId){
 //   return new Promise(function (resolve, reject) {
 //     connection.query(

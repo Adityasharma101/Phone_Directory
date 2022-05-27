@@ -1,49 +1,42 @@
 @import url("footer.css");
 @import url("header.css");
+@import url("color.css");
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  :root {
-    --color1: #000000;
-    --color3: #ff0000;
-    --color2: #ededed;
-  }
-  
-  body {
-    height: 100vh;
-    background: var(--color1);
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  height: 100vh;
+  background: var(--color1);
+}
 
-
-.contact-container{
+.contact-container {
   color: var(--color2);
   position: relative;
 }
 
-.search-box{
+.search-box {
   position: absolute;
-  right: 10px; 
+  right: 10px;
   top: 0;
   background: var(--color3);
   border-radius: 50px;
   padding: 5px;
 }
 
-
 .search-input {
   outline: none;
   border: none;
   background: none;
   width: 0;
-  padding: 0 ;
+  padding: 0;
   color: var(--color2);
   float: left;
   font-size: 14px;
   font-weight: 500;
-  transition: .3s;
+  transition: 0.3s;
   line-height: 40px;
 }
 .search-input::placeholder {
@@ -51,7 +44,7 @@
 }
 
 .search-btn {
-  color:var(--color2);
+  color: var(--color2);
   float: right;
   width: 40px;
   height: 40px;
@@ -62,7 +55,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 .search-input:focus,
 .search-input:not(:placeholder-shown) {
@@ -80,18 +73,16 @@
   color: var(--color3);
 }
 
-.elseTxt{
-  
+.elseTxt {
   display: flex;
   justify-content: center;
-  
 }
-.elseTxt p{
+.elseTxt p {
   padding: 0.5rem;
   border-bottom: 2px solid var(--color3);
 }
 .accordion {
-  background-color:var(--color1);
+  background-color: var(--color1);
   color: var(--color2);
   cursor: pointer;
   padding: 18px;
@@ -106,13 +97,14 @@
   border-radius: 15px;
 }
 
-.activeAccordion, .accordion:hover {
+.activeAccordion,
+.accordion:hover {
   background-color: var(--color3);
   border: 1px solid var(--color3);
 }
 
 .accordion:after {
-  content: '\002B';
+  content: "\002B";
   color: var(--color2);
   font-weight: bold;
   float: right;
@@ -132,11 +124,12 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
-.buttons{
+.buttons {
   display: flex;
 }
 
-.deleteBtn , .editBtn{
+.deleteBtn,
+.editBtn {
   text-decoration: none;
   border: 1px solid var(--color2);
   background-color: var(--color1);
@@ -146,8 +139,8 @@
   border-radius: 5px;
 }
 
-
-.deleteBtn:hover ,.editBtn:hover{
+.deleteBtn:hover,
+.editBtn:hover {
   background-color: var(--color2);
   border: 1px solid var(--color1);
 }
