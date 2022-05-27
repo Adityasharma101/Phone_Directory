@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Contacts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/allContacts.css">
+</head>
+
+<body>
+
+    {{>header active}}
+
+
+    <div class="contact-container container  mt-5">
+        <h2 class="text-center">Contacts</h2>
+
+
+
+        <form action="/search" class="search-box">
+            <input type="text" class="search-input" id="searchTxt" placeholder="Enter Name To Search!">
+            <a class="search-btn" href="#" type="submit">
+                🔍
+            </a>
+        </form>
+
+        <div class="accordionContainer mt-3">
+
+            {{#if contact.length}}
+            {{#each contact as |contact|}}
+            <button class="accordion accordion-data">Name: {{contact.name}}</button>
+            <div class="panel">
+                <p>
+                    Number: {{contact.phone}}
+                </p>
+                <p>
+                    Email: {{contact.email}}
+                </p>
+                <div class="buttons">
+
+                    <a href="/delete/{{contact.id}}" class="deleteBtn" id="deleteBtn">❌</a>
+                    <a href="/edit/{{contact.id}}" class="editBtn">📝</a>
+                </div>
+            </div>
+
+            {{/each}}
+
+
+            {{else}}
+               <div class="elseTxt">
+                   <p>DON'T HAVE ANY CONTACT TO SHOW </p>
+               </div>
+            {{/if}}
+    
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    {{>footer}}
+
+    <script async defer src="js/allContacts.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

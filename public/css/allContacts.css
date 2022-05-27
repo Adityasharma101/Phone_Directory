@@ -1,0 +1,153 @@
+@import url("footer.css");
+@import url("header.css");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --color1: #000000;
+    --color3: #ff0000;
+    --color2: #ededed;
+  }
+  
+  body {
+    height: 100vh;
+    background: var(--color1);
+  }
+
+
+
+.contact-container{
+  color: var(--color2);
+  position: relative;
+}
+
+.search-box{
+  position: absolute;
+  right: 10px; 
+  top: 0;
+  background: var(--color3);
+  border-radius: 50px;
+  padding: 5px;
+}
+
+
+.search-input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 0;
+  padding: 0 ;
+  color: var(--color2);
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  transition: .3s;
+  line-height: 40px;
+}
+.search-input::placeholder {
+  color: var(--color2);
+}
+
+.search-btn {
+  color:var(--color2);
+  float: right;
+  width: 40px;
+  height: 40px;
+  border: 0.5px solid var(--color1);
+  border-radius: 50px;
+  background: var(--color3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: .3s;
+}
+.search-input:focus,
+.search-input:not(:placeholder-shown) {
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-input {
+  width: 240px;
+  padding: 0 6px;
+}
+.search-box:hover > .search-btn,
+.search-input:focus + .search-btn,
+.search-input:not(:placeholder-shown) + .search-btn {
+  background: var(--color2);
+  color: var(--color3);
+}
+
+.elseTxt{
+  
+  display: flex;
+  justify-content: center;
+  
+}
+.elseTxt p{
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--color3);
+}
+.accordion {
+  background-color:var(--color1);
+  color: var(--color2);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+  border: 1px solid var(--color2);
+  margin-top: 1rem;
+  border-radius: 15px;
+}
+
+.activeAccordion, .accordion:hover {
+  background-color: var(--color3);
+  border: 1px solid var(--color3);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: var(--color2);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.activeAccordion:after {
+  content: "\2212";
+}
+
+.panel {
+  margin-top: 15px;
+  color: var(--color2);
+  padding: 0 18px;
+  background-color: var(--color1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.buttons{
+  display: flex;
+}
+
+.deleteBtn , .editBtn{
+  text-decoration: none;
+  border: 1px solid var(--color2);
+  background-color: var(--color1);
+  padding: 6px 18px;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+
+
+.deleteBtn:hover ,.editBtn:hover{
+  background-color: var(--color2);
+  border: 1px solid var(--color1);
+}
